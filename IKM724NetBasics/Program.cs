@@ -47,11 +47,10 @@ namespace AutomatedWaterTreatmentSystem
             var sensorFactories = new Dictionary<string, Func<Sensor>>
             {
                 {"InnerWaterTurbidity",() => new TurbiditySensor("Turbidity", "Monitors water clarity") },
-                {"OuterWaterTurbidity",() => new TurbiditySensor("Turbidity", "Monitors water clarity") }
+                {"OuterWaterTurbidity",() => new TurbiditySensor("Turbidity", "Monitors water clarity") },
                 {"InnerWaterAcidity",() => new AciditySensor("Acidity", "Monitors water pH level") },
                 {"OuterWaterAcidity",() => new AciditySensor("Acidity", "Monitors water pH level") },
                 {"Temperature", () => new TemperatureSensor("Temperature", "Monitors water temperature") },
-                // Add your sensors here
             };
 
             foreach(var indicator in deserializedResult)
